@@ -57,6 +57,7 @@
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ url('/admin/category') }}">Category</a>
+                                    <a class="nav-link" href="{{ url('/admin/package') }}">Package</a>
                                     <a class="nav-link" href="{{ url('/simple-curd-image') }}">Crud With Image</a>
                                     <a class="nav-link" href="{{ url('/multiple-images') }}">Crud for multiple image</a>
                                 </nav>
@@ -121,6 +122,10 @@
 
                     </div>
                 </main>
+                <style>
+                    .mini-image{height: 120px;width: 120px;}
+                    .micro-image{height: 60px;width: 60px;}
+                </style>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">

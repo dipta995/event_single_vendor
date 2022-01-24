@@ -49,7 +49,7 @@ Route::post('update_cat/{id}', [CategoryController::class,'update']);
 //Package
 Route::get('/admin/package', [PackageController::class,'index']);
 Route::get('/admin/package/create', [PackageController::class,'create']);
-Route::post('add_new_pack', [PackageController::class,'store']);
+Route::post('add_new_product', [PackageController::class,'store']);
 Route::get('/admin/package/delete/{id}', [PackageController::class,'destroy']);
 Route::get('/admin/package/{id}', [PackageController::class,'edit']);
 Route::post('update_pack/{id}', [PackageController::class,'update']);

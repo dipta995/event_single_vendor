@@ -41,8 +41,8 @@
                             <td>{{ $item->cat_title }}</td>
                             <td>{{ $item->price }}</td>
                             <td>{{ $item->discount }}</td>
-                            <td>{{ $item->image }}</td>
-                            <td><a href="{{ url('/admin/category/delete/'.$item->id) }}" class="btn btn-danger m-2"><i class="fas fa-trash-alt"></i></a><a class="btn btn-info" href="{{ url('/admin/category/'.$item->id) }}"><i class="fas fa-edit"></i></a></td>
+                            <td><img class="micro-image" src="{{ url('images/'.$item->image ) }}" alt=""></td>
+                            <td><a href="{{ url('/admin/package/delete/'.$item->id) }}" class="btn btn-danger m-2"><i class="fas fa-trash-alt"></i></a><a class="btn btn-info" href="{{ url('/admin/package/'.$item->id) }}"><i class="fas fa-edit"></i></a></td>
                         </tr>
                     @endforeach
                     </tr>
