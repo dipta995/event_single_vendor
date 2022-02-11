@@ -34,7 +34,7 @@
                 </tfoot>
                 <tbody>
                     <tr>
-                        @foreach ($products as $key=>$item)
+                        @foreach ($packages as $key=>$item)
                         <tr>
                             <td>{{ $key+1 }}</td>
                             <td>{{ $item->pr_title }}</td>

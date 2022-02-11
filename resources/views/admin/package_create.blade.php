@@ -50,8 +50,24 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating mb-3 mb-md-0">
+                                    <textarea class="form-control" name="short_description" id="inputFirstName" rows="20" cols="10"></textarea>
+                                    <label for="inputFirstName">Short Description</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3 mb-md-0">
                                     <textarea class="form-control" name="description" id="inputFirstName" rows="20" cols="10"></textarea>
                                     <label for="inputFirstName">Description</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3 mb-md-0">
+                                    <select name="home_view" class="form-control" id="">
+
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                <label for="inputFirstName">Home View</label>
                                 </div>
                             </div>
                         </div>

@@ -43,34 +43,30 @@
 
             <div class="collapse navbar-collapse justify-content-end" id="mainNav">
                 <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link smoth-scroll" href="{{ url('/') }}">Home</a>
+                    </li>
                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Home
+                        <a class="nav-link dropdown-toggle" href="javascript.void(0)" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categories
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarWelcome">
                             @foreach (DB::table('categories')->get() as $item)
 
-                            @endforeach
                             <a class="dropdown-item " href="{{ url('category/'.$item->slug) }}">
                                 {{ $item->cat_title }}
                             </a>
+                            @endforeach
 
                         </div>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="about.html">About</a>
+                        <a class="nav-link smoth-scroll" href="{{ url('/packages') }}">Packages</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="service.html">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="pricing.html">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="contact.html">Contact</a>
+                        <a class="nav-link smoth-scroll" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
             </div>

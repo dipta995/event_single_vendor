@@ -56,8 +56,23 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating mb-3 mb-md-0">
+                                    <textarea class="form-control" name="short_description" id="inputFirstName" rows="20" cols="10">{{ $package->short_description }}</textarea>
+                                    <label for="inputFirstName">Short Description</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3 mb-md-0">
                                     <textarea class="form-control" name="description" id="inputFirstName" rows="20" cols="10">{{ $package->description }}</textarea>
                                     <label for="inputFirstName">Description</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3 mb-md-0">
+                                    <select name="home_view" class="form-control" id="">
+                                        <option {{ ($package->home_view == 0) ? 'selected' : ''}} value="0" >No</option>
+                                        <option {{ ($package->home_view == 1) ? 'selected' : ''}} value="1">Yes</option>
+                                    </select>
+                                <label for="inputFirstName">Home View</label>
                                 </div>
                             </div>
                         </div>

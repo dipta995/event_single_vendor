@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Package;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,8 @@ class PackageController extends Controller
      */
     public function index()
     {
-        $products = Package::all();
-        return view('admin.package',compact('products'));
+        $packages = Package::leftJoin('categories','categories.id','packages.cat_id')->where('is_active','0')->where('home_view','1')->get();
+        return view('admin.package',compact('packages'));
     }
 
     /**
@@ -44,7 +45,7 @@ class PackageController extends Controller
         $request->validate([
             'cat_id' =>'required',
             'pr_title' => 'required|max:150',
-            'description' => 'required',
+            'short_description' => 'required',
             'price' => 'required|numeric|min:1',
             'discount' =>'required|numeric|min:0',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp',
@@ -57,8 +58,10 @@ class PackageController extends Controller
                 'pr_title'=>$request->input('pr_title'),
                 'slug'=>slugify($request->input('pr_title')),
                 'description'=>$request->input('description'),
+                'short_description'=>$request->input('short_description'),
                 'price'=>$request->input('price'),
                 'discount'=>$request->input('discount'),
+                'home_view'=>$request->input('home_view'),
                 'image'=>$file_name
             ]);
 
@@ -66,7 +69,7 @@ class PackageController extends Controller
              $file->move(public_path('images/'),$file_name);
              return redirect('/admin/package')->with('success','inserted');
                        }
-            
+
           else{
             return back()->with('fail','Something Went wrong Try Again!');
           }
@@ -128,6 +131,8 @@ class PackageController extends Controller
                     'description'=>$request->input('description'),
                     'price'=>$request->input('price'),
                     'discount'=>$request->input('discount'),
+                    'short_description'=>$request->input('short_description'),
+                    'home_view'=>$request->input('home_view'),
                     'image'=>$file_name
                ]);
     $file->move(public_path('images/'),$file_name);
@@ -170,4 +175,53 @@ class PackageController extends Controller
             return back()->with('error','Something wrong');
         }
     }
+    public function delimage($id)
+    {
+        $send = Image::destroy($id);
+        if ($send) {
+            return back()->with('success','Deleted');
+        }else {
+            return back()->with('error','Something wrong');
+        }
+    }
+
+    public function imageindex()
+    {
+        $packages = Package::where('is_active','0')->get();
+        $images = Image::all();
+        return view('admin.multipleimage',compact('packages','images'));
+    }
+
+    public function multipleimage(Request $request)
+    {
+    $filetest =$request->validate([
+        'image' => 'required',
+     ]);
+
+
+
+   if ($request->image !="") {
+$getfile = $request->file("image");
+
+    foreach ($getfile as  $key=>$file) {
+
+    $file_name=time().$key.'.'.$file->extension();
+       $imgins = Image::insert([
+        'image'=>$file_name,
+        'package_id'=>$request->input('package_id')
+
+      ]);
+     $file->move(public_path('images/'),$file_name);
+  }
+    if ($imgins) {
+
+      return back()->with('success','Successfully New subCategory Created');
+    }
+    else{
+      return back()->with('fail','Something Went wrong Try Again!');
+    }
+
+   }
+}
+
 }

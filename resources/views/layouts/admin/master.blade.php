@@ -58,8 +58,8 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ url('/admin/category') }}">Category</a>
                                     <a class="nav-link" href="{{ url('/admin/package') }}">Package</a>
-                                    <a class="nav-link" href="{{ url('/simple-curd-image') }}">Crud With Image</a>
-                                    <a class="nav-link" href="{{ url('/multiple-images') }}">Crud for multiple image</a>
+
+                                    <a class="nav-link" href="{{ url('/admin/multipleimage') }}">Package images</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">

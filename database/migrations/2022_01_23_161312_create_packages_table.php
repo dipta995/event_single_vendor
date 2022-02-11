@@ -21,9 +21,11 @@ class CreatePackagesTable extends Migration
             $table->string('discount');
             $table->string('slug')->unique();
             $table->string('image');
-            $table->text('description')->nullable();
+            $table->text('short_description')->nullable();
+            $table->longText('description')->nullable();
 
             $table->integer('is_active')->default('0');
+            $table->integer('home_view')->default('0');
             $table->timestamps();
             $table->foreign('cat_id')->references('id')->on('categories')->cascadeOnDelete();
         });
