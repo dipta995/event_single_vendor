@@ -27,7 +27,7 @@ class BaseController extends Controller
 
     public function threepackage()
     {
-        $packages = Package::where('is_active','0')->limit(3)->get();
+        $packages = Package::where('is_active','0')->where('home_view','1')->limit(3)->get();
         return view('user.home',compact('packages'));
     }
     public function packagedetails($slug)

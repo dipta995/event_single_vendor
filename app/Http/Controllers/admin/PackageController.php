@@ -17,7 +17,7 @@ class PackageController extends Controller
      */
     public function index()
     {
-        $packages = Package::leftJoin('categories','categories.id','packages.cat_id')->where('is_active','0')->where('home_view','1')->get();
+        $packages = Package::leftJoin('categories','categories.id','packages.cat_id')->where('is_active','0')->get();
         return view('admin.package',compact('packages'));
     }
 
