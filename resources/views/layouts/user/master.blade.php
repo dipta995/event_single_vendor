@@ -61,9 +61,47 @@
                         </div>
                     </li>
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript.void(0)" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profile
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarWelcome">
+
+                            @if (Route::has('login'))
+                            @auth
+                            <a class="dropdown-item" href="javascript.void(0)">
+                                {{ Auth::user()->name }}
+                            </a>
+                            @if (Auth::user()->role == 'admin')
+
+                            <a class="dropdown-item " href="{{ url('/author') }}">Admin </a>
+                            @endif
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <a class="dropdown-item " href="{{ route('logout') }}"
+                                         onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                            </a>
+                            </form>
+
+                            @else
+
+                            <a href="{{ route('login') }}" class="dropdown-item ">Log in</a>
+
+                            <a href="{{ route('register') }}" class="dropdown-item ">Registration</a>
+
+                            @endauth
+                            @endif
+
+                        </div>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link smoth-scroll" href="{{ url('/packages') }}">Packages</a>
                     </li>
+
 
                     <li class="nav-item">
                         <a class="nav-link smoth-scroll" href="contact.html">Contact Us</a>
