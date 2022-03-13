@@ -17,6 +17,7 @@ class CreatePackagesTable extends Migration
             $table->id();
             $table->string('pr_title');
             $table->unsignedBigInteger('cat_id');
+            $table->integer('day');
             $table->string('price');
             $table->string('discount');
             $table->string('slug')->unique();

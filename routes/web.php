@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\PackageController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\user\BaseController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,8 +31,12 @@ Route::get('/packages', [BaseController::class,'allpackage']);
 Route::get('/category/{slug}', [BaseController::class,'packByCategory']);
 Route::get('package-details/{slug}', [BaseController::class,'packagedetails']);
 
-//Customer Authontication Area
 Route::group(['middleware'=>['auth:sanctum','verified','auth',]],function(){
+//Customer Authontication Area
+Route::get('offer/{slug}', [OrderController::class,'offerview']);
+// Route::get('order/{slug}', [OrderController::class,'orderview']);
+Route::post('send-order-offer', [OrderController::class,'store']);
+
 
 
 });
