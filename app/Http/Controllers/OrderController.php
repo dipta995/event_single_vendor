@@ -56,5 +56,36 @@ class OrderController extends Controller
           }
         }
 
-}
+    }
+    public function pendingOrder(){
+        $packages = Order::leftJoin('packages','packages.id','orders.package_id')->leftJoin('users','users.id','orders.customer_id')->where('orders.is_active','0')->get();
+        return view('admin.pending-order',compact('packages'));
+
+    }
+    public function runningOrder(){
+        $packages = Order::leftJoin('packages','packages.id','orders.package_id')->leftJoin('users','users.id','orders.customer_id')->where('orders.is_active','1')->get();
+        return view('admin.running-order',compact('packages'));
+
+    }
+    public function approveOrder($id){
+        $send =  Order::where('id', $id)->update([
+            'is_active' => 1,
+            ]);
+        if ($send) {
+            return redirect('/admin/pending-order')->with('success','inserted');
+        }else {
+            return back()->with('error','Something wrong');
+        }
+
+
+    }
+    public function deleteOrder($id){
+        $send = Order::destroy($id);
+        if ($send) {
+            return back()->with('success','Deleted');
+        }else {
+            return back()->with('error','Something wrong');
+        }
+
+    }
 }
