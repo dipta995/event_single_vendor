@@ -33,7 +33,7 @@ class BaseController extends Controller
     public function packagedetails($slug)
     {
         $category = Category::all();
-        $package = Package::where('is_active','0')->first();
+        $package = Package::where('slug',$slug)->first();
         return view('user.package-details',compact('package','category'));
     }
 }
