@@ -68,6 +68,7 @@
                                     <a class="nav-link" href="{{ url('/admin/package') }}">Package</a>
 
                                     <a class="nav-link" href="{{ url('/admin/multipleimage') }}">Package images</a>
+                                    <a class="nav-link" href="{{ url('/admin/gallery') }}">Gallery Manage</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">

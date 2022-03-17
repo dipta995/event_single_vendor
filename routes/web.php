@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\GalleryController;
 use App\Http\Controllers\admin\PackageController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\user\BaseController;
@@ -36,7 +37,7 @@ Route::group(['middleware'=>['auth:sanctum','verified','auth',]],function(){
 Route::get('offer/{slug}', [OrderController::class,'offerview']);
 // Route::get('order/{slug}', [OrderController::class,'orderview']);
 Route::post('send-order-offer', [OrderController::class,'store']);
-
+Route::get('/gallery', [GalleryController::class,'index']);
 
 
 });
@@ -73,6 +74,11 @@ Route::get('/admin/pending-order', [OrderController::class,'pendingOrder']);
 Route::get('/admin/running-order', [OrderController::class,'runningOrder']);
 Route::get('/admin/order/approve/{id}', [OrderController::class,'approveOrder']);
 Route::get('/admin/order/delete/{id}', [OrderController::class,'deleteOrder']);
+
+//Gallery Packages
+Route::get('/admin/gallery', [GalleryController::class,'index']);
+Route::post('/admin/add_new_gallery', [GalleryController::class,'store']);
+Route::get('/admin/gallery/delete/{id}', [GalleryController::class,'destroy']);
 
 
 //

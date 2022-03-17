@@ -4,6 +4,7 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Gallery;
 use App\Models\Package;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,7 @@ class BaseController extends Controller
     {
 
         $packages = Package::where('is_active','0')->get();
+
         return view('user.category-package',compact('packages'));
     }
     public function packByCategory($slug)
@@ -27,8 +29,9 @@ class BaseController extends Controller
 
     public function threepackage()
     {
+        $gallery = Gallery::all();
         $packages = Package::where('is_active','0')->where('home_view','1')->limit(3)->get();
-        return view('user.home',compact('packages'));
+        return view('user.home',compact('packages','gallery'));
     }
     public function packagedetails($slug)
     {
