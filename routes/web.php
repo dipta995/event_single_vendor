@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\EmployeeController;
 use App\Http\Controllers\admin\GalleryController;
 use App\Http\Controllers\admin\PackageController;
 use App\Http\Controllers\OrderController;
@@ -80,6 +81,15 @@ Route::get('/admin/gallery', [GalleryController::class,'index']);
 Route::post('/admin/add_new_gallery', [GalleryController::class,'store']);
 Route::get('/admin/gallery/delete/{id}', [GalleryController::class,'destroy']);
 
+//Employee Packages
+Route::get('/admin/employee', [EmployeeController::class,'index']);
+Route::get('/admin/employee/create', [EmployeeController::class,'create']);
+Route::post('/admin/employee_create', [EmployeeController::class,'store']);
+Route::post('/admin/employee_update/{id}', [EmployeeController::class,'update']);
+Route::get('/admin/employee/{id}', [EmployeeController::class,'edit']);
+Route::get('/admin/employee/delete/{id}', [EmployeeController::class,'destroy']);
+Route::get('/admin/employee/pay/{id}', [EmployeeController::class,'pay']);
+Route::post('/admin/employee_payment/{id}', [EmployeeController::class,'payment']);
 
-//
+
 });

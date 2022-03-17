@@ -69,9 +69,10 @@
 
                             @if (Route::has('login'))
                             @auth
-                            <a class="dropdown-item" href="javascript.void(0)">
+                            <a class="dropdown-item" href="">
                                 {{ Auth::user()->name }}
                             </a>
+                            <a class="dropdown-item" href="{{ route('profile.show') }}">Profile</a>
                             @if (Auth::user()->role == 'admin')
 
                             <a class="dropdown-item " href="{{ url('/author') }}">Admin </a>
