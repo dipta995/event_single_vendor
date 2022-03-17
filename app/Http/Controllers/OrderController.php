@@ -58,12 +58,14 @@ class OrderController extends Controller
 
     }
     public function pendingOrder(){
-        $packages = Order::leftJoin('packages','packages.id','orders.package_id')->leftJoin('users','users.id','orders.customer_id')->where('orders.is_active','0')->get();
+        $packages = Order::leftJoin('packages','packages.id','orders.package_id')->leftJoin('users','users.id','orders.customer_id')->select('packages.*','users.*', 'packages.pr_title as pr_title','users.name as name','users.email as email','orders.package_price as package_price','orders.offer_price as offer_price','orders.id as id','orders.message as message','packages.price as price','packages.discount as discount')->where('orders.is_active','0')->get();
+
         return view('admin.pending-order',compact('packages'));
 
     }
     public function runningOrder(){
-        $packages = Order::leftJoin('packages','packages.id','orders.package_id')->leftJoin('users','users.id','orders.customer_id')->where('orders.is_active','1')->get();
+        $packages = Order::leftJoin('packages','packages.id','orders.package_id')->leftJoin('users','users.id','orders.customer_id')->select('packages.*','users.*', 'packages.pr_title as pr_title','users.name as name','users.email as email','orders.package_price as package_price','orders.offer_price as offer_price','orders.id as id','orders.message as message','packages.price as price','packages.discount as discount')->where('orders.is_active','0')->get();
+
         return view('admin.running-order',compact('packages'));
 
     }

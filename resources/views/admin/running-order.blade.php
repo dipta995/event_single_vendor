@@ -39,10 +39,10 @@
                             <td>{{ $key+1 }}</td>
                             <td>{{ $item->pr_title }}</td>
                             <td>{{ $item->name }}<br>{{ $item->email }}</td>
-                            <td>{{ $item->price }}<br>{{ $item->price-(($item->price*$item->discount)/100) }}</td>
+                            <td>{{ $item->package_price }}<br>{{ $item->package_price-(($item->package_price*$item->discount)/100) }}</td>
                             <td>{{ $item->offer_price }}</td>
-                            <td></td>
-                            <td><a href="javascript.void(0)" class="btn btn-info m-2"><i class="fas fa-clock"></i></a></td>
+                            <td>{{ $item->message }}</td>
+                            <td><a href="" class="btn btn-info m-2"><i class="fas fa-clock"></i></a></td>
                         </tr>
                     @endforeach
                     </tr>
