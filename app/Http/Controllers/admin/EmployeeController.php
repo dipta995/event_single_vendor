@@ -129,11 +129,9 @@ public function destroy($id)
         $updateproduct = Employee::where('id', $id)->update([
             'is_active'=>1
             ]);
-
                 if ($updateproduct) {
-
                 return redirect('/admin/employee')->with('success','inserted');
-                    }
+                }
                 else{
                 return back()->with('fail','Something Went wrong Try Again!');
                 }
@@ -144,8 +142,6 @@ public function destroy($id)
     }
     public function payment(Request $request)
     {
-
-
                 $addpack = EmployeePayment::insert([
                 'employee_id'=>$request->input('employee_id'),
                 'paid_balance'=>$request->input('paid_balance'),
@@ -163,4 +159,23 @@ public function destroy($id)
             return back()->with('fail','Something Went wrong Try Again!');
             }
     }
+
+    public function salaryList(Request $request)
+    {
+        if (empty($request->query('month'))&& empty($request->query('year'))) {
+           $salary_sheet = Employee::leftJoin('employee_payments','employees.id','employee_payments.employee_id')->leftJoin('users','employees.customer_id','users.id')->get();
+
+        }else {
+
+            $month = $request->query('month');
+            $year  =$request->query('year');
+            $salary_sheet = Employee::leftJoin('employee_payments','employees.id','employee_payments.employee_id')->leftJoin('users','employees.customer_id','users.id')->where('employee_payments.month',$month)->where('employee_payments.year',$year)->get();
+
+        }
+        return view('admin.salary',compact('salary_sheet'));
+    }
+
+
+
+
 }

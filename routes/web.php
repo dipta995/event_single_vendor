@@ -90,6 +90,8 @@ Route::get('/admin/employee/{id}', [EmployeeController::class,'edit']);
 Route::get('/admin/employee/delete/{id}', [EmployeeController::class,'destroy']);
 Route::get('/admin/employee/pay/{id}', [EmployeeController::class,'pay']);
 Route::post('/admin/employee_payment/{id}', [EmployeeController::class,'payment']);
+Route::get('/admin/salary', [EmployeeController::class,'salaryList']);
+
 
 
 });

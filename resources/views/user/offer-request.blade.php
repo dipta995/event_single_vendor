@@ -31,7 +31,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">offer_price</label>
-                                                    <input type="number" name="offer_price"  value="{{ $price_main = $package->price-(($package->price*$package->discount)/100) }}" max="{{ $price_main }}" min="{{ round($price_main*20)/100 }}"  class="form-control">
+                                                    <input type="number" name="offer_price"  value="{{ $price_main = $package->price-(($package->price*$package->discount)/100) }}" max="{{ $price_main }}" min="{{ round($package->price-($price_main*20)/100) }}"  class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">message</label>
