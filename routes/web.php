@@ -36,6 +36,7 @@ Route::get('package-details/{slug}', [BaseController::class,'packagedetails']);
 Route::group(['middleware'=>['auth:sanctum','verified','auth',]],function(){
 //Customer Authontication Area
 Route::get('offer/{slug}', [OrderController::class,'offerview']);
+Route::get('order-list', [OrderController::class,'customerOrderhistory']);
 // Route::get('order/{slug}', [OrderController::class,'orderview']);
 Route::post('send-order-offer', [OrderController::class,'store']);
 Route::get('/gallery', [GalleryController::class,'index']);

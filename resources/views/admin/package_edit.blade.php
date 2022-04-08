@@ -47,6 +47,14 @@
                                     <label for="inputFirstName">discount</label>
                                 </div>
                             </div>
+
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3 mb-md-0">
+                                    <input class="form-control" name="day" id="inputFirstName" type="number" min="0" value="{{ $package->day }}" />
+                                    <label for="inputFirstName">Day</label>
+                                </div>
+                            </div>
+
                             <div class="col-md-12">
                                 <div class="form-floating mb-3 mb-md-0">
                                     <input class="form-control" name="image" id="inputFirstName" type="file" min="0" placeholder="Enter your category name" />

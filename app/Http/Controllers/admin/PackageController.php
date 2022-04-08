@@ -20,7 +20,7 @@ class PackageController extends Controller
         $packages = Package::leftJoin('categories','categories.id','packages.cat_id')->where('is_active','0')->get();
         return view('admin.package',compact('packages'));
     }
-
+ 
     /**
      * Show the form for creating a new resource.
      *
@@ -61,6 +61,7 @@ class PackageController extends Controller
                 'short_description'=>$request->input('short_description'),
                 'price'=>$request->input('price'),
                 'discount'=>$request->input('discount'),
+                'day'=>$request->input('day'),
                 'home_view'=>$request->input('home_view'),
                 'image'=>$file_name
             ]);
@@ -131,6 +132,7 @@ class PackageController extends Controller
                     'description'=>$request->input('description'),
                     'price'=>$request->input('price'),
                     'discount'=>$request->input('discount'),
+                    'day'=>$request->input('day'),
                     'short_description'=>$request->input('short_description'),
                     'home_view'=>$request->input('home_view'),
                     'image'=>$file_name
@@ -143,6 +145,7 @@ class PackageController extends Controller
             'pr_title'=>$request->input('pr_title'),
             'slug'=>slugify($request->input('pr_title')),
             'description'=>$request->input('description'),
+            'day'=>$request->input('day'),
             'price'=>$request->input('price'),
             'discount'=>$request->input('discount')
             ]);

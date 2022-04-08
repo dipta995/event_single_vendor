@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Order;
 use App\Models\Package;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -81,6 +82,13 @@ class OrderController extends Controller
 
 
     }
+    public function customerOrderhistory(){
+        $packages = Order::leftJoin('packages','packages.id','orders.package_id')->leftJoin('users','users.id','orders.customer_id')->select('packages.*','users.*', 'packages.pr_title as pr_title','users.name as name','users.email as email','orders.package_price as package_price','orders.offer_price as offer_price','orders.id as id','orders.message as message','packages.price as price','packages.discount as discount','orders.is_active as active_check')->where('orders.customer_id',Auth::user()->id)->get();
+
+        return view('user.order-list',compact('packages'));
+
+    }
+
     public function deleteOrder($id){
         $send = Order::destroy($id);
         if ($send) {

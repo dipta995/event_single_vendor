@@ -73,6 +73,7 @@
                                 {{ Auth::user()->name }}
                             </a>
                             <a class="dropdown-item" href="{{ route('profile.show') }}">Profile</a>
+                            <a class="dropdown-item" href="{{ url('order-list') }}">My order list</a>
                             @if (Auth::user()->role == 'admin')
 
                             <a class="dropdown-item " href="{{ url('/author') }}">Admin </a>
