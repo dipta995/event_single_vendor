@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\EmployeeController;
 use App\Http\Controllers\admin\GalleryController;
 use App\Http\Controllers\admin\PackageController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\user\BaseController;
 use Illuminate\Support\Facades\Route;
@@ -40,7 +41,9 @@ Route::get('order-list', [OrderController::class,'customerOrderhistory']);
 // Route::get('order/{slug}', [OrderController::class,'orderview']);
 Route::post('send-order-offer', [OrderController::class,'store']);
 Route::get('/gallery', [GalleryController::class,'index']);
-
+Route::get('/contact-us', function () {
+    return view('user.contact');
+});
 
 });
 //Admin Authontication Area
@@ -91,8 +94,11 @@ Route::get('/admin/employee/{id}', [EmployeeController::class,'edit']);
 Route::get('/admin/employee/delete/{id}', [EmployeeController::class,'destroy']);
 Route::get('/admin/employee/pay/{id}', [EmployeeController::class,'pay']);
 Route::post('/admin/employee_payment/{id}', [EmployeeController::class,'payment']);
-Route::get('/admin/salary', [EmployeeController::class,'salaryList']);
+Route::post('/admin/employee_payment/{id}', [EmployeeController::class,'payment']);
 
+//Customer manage
+Route::get('admin/customer', [CustomerController::class,'index']);
+Route::get('admin/customer/delete/{id}', [CustomerController::class,'delete']);
 
 
 });

@@ -12,7 +12,7 @@
                             <h1 class="banner-title">We craft seo and digital markting services</h1>
                             <p>We provide marketing services to startups and small businesses to looking for a partner for their digital media, design-area.We are a a startup company to be commited to work and time management.</p>
 
-                            <a href="#" class="btn btn-white btn-circled">lets start</a>
+                            <a href="{{ url('contact-us') }}" class="btn btn-white btn-circled">ontact Us</a>
                         </div>
                     </div>
                 </div>
