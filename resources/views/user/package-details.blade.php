@@ -51,52 +51,48 @@
                             </div>
 
 
-                            {{-- <div class="comments my-4">
+                           <div class="comments my-4">
                                 <h3 class="mb-5">Comments :</h3>
-
+                            @foreach ($reviews as $value)
                                 <div class="media mb-4">
-                                    <img src="images/blog/2.jpg" alt="" class="img-fluid d-flex mr-4 rounded">
+                                    <img src="{{ asset('user/images/blog/2.jpg') }}" alt="" class="img-fluid d-flex mr-4 rounded">
                                     <div class="media-body">
-                                        <h5>John michele</h5>
-                                        <span class="text-muted">20 Jan 2018</span>
-                                        <p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi laborum dolores quidem ea optio fuga nesciunt tempora, in tenetur iusto!</p>
+                                        <h5>{{ $value->name }}</h5>
+                                        <span class="text-muted">{{ $value->comment_at }}</span>
+                                        <p class="mt-2">{{ $value->comment }}</p>
 
-                                        <a href="#" class="reply">Reply <i class="fa fa-reply"></i></a>
-
+                                        {{-- <a href="#" class="reply">Reply <i class="fa fa-reply"></i></a> --}}
+                                        @if ($value->replay !=null)
                                             <div class="media mt-5">
-                                                <img src="images/blog/2.jpg" alt="" class="img-fluid d-flex mr-4 rounded">
+                                                <img src="{{ asset('user/images/blog/2.jpg') }}" alt="" class="img-fluid d-flex mr-4 rounded">
                                                 <div class="media-body">
-                                                    <h5>John michele</h5>
-                                                    <span class="text-muted">20 Jan 2018</span>
-                                                    <p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi laborum dolores quidem ea optio fuga nesciunt tempora, in tenetur iusto!</p>
+                                                    <span class="text-muted">{{ $value->replay_at }}</span>
+                                                    <p class="mt-2">{{ $value->replay }}</p>
 
-                                                    <a href="#" class="reply">Reply <i class="fa fa-reply"></i></a>
+                                                    {{-- <a href="#" class="reply">Reply <i class="fa fa-reply"></i></a> --}}
                                                 </div>
                                             </div>
-                                    </div>
-                                </div>
-                                <div class="media mb-4">
-                                    <img src="images/blog/2.jpg" alt="" class="img-fluid d-flex mr-4 rounded">
-                                    <div class="media-body">
-                                        <h5>John michele</h5>
-                                        <span class="text-muted">20 Jan 2018</span>
-                                        <p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi laborum dolores quidem ea optio fuga nesciunt tempora, in tenetur iusto!</p>
 
-                                        <a href="#" class="reply">Reply <i class="fa fa-reply"></i></a>
+                                        @endif
                                     </div>
                                 </div>
+
+                                @endforeach
                             </div>
-
+                            @if (Route::has('login'))
+                            @auth
                             <div class="mt-5 mb-3">
                                 <h3 class="mt-5 mb-2">Leave a comment</h3>
-                                <p class="mb-4">We don't spam at your inbox.</p>
-                                <form action="#" class="row">
+                                {{-- <p class="mb-4">We don't spam at your inbox.</p> --}}
+                                <form action="{{ url('send/comment') }}" method="POST" class="row">
+                                    @csrf
                                     <div class="col-lg-12">
+                                        <input type="hidden" value="{{ $package->id }}" name="package_id">
                                         <div class="form-group mb-3">
-                                            <textarea cols="30" rows="6" class="form-control" placeholder="Message"></textarea>
+                                            <textarea name="comment" cols="30" rows="6" class="form-control" placeholder="Message"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    {{-- <div class="col-lg-6">
                                         <div class="form-group mb-3">
                                             <input type="text" class="form-control" placeholder="Name">
                                         </div>
@@ -106,26 +102,28 @@
                                         <div class="form-group mb-4">
                                             <input type="email" class="form-control" placeholder="Email">
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="col-lg-12">
-                                        <a href="#" class="btn btn-hero btn-circled">Send a message</a>
+                                        <input type="submit" name="submit" class="btn btn-hero btn-circled" value="Send a message">
                                     </div>
                                 </form>
-                            </div> --}}
+                            </div>
+                            @endauth
+                            @endif
                         </div>
                     </div>
             </div>
             <div class="col-lg-4">
                                     <div class="row">
-                        <div class="col-lg-12">
+                        {{-- <div class="col-lg-12">
                             <div class="sidebar-widget search">
                                 <div class="form-group">
                                     <input type="text" placeholder="search" class="form-control">
                                     <i class="fa fa-search"></i>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="col-lg-12">
                             <div class="sidebar-widget about-bar">

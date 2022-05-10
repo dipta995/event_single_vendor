@@ -42,6 +42,7 @@
                                                        echo "<span class='btn-info'>Running</span>";
                                                     }else {
                                                         echo "<span class='btn-success'>Finish</span>";
+                                                        echo "<a href='/package-details/".$item->slug."' class='btn btn-info'>Review</a>";
                                                     }
                                                 @endphp
                                             </td>

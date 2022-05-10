@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\GalleryController;
 use App\Http\Controllers\admin\PackageController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\user\BaseController;
 use Illuminate\Support\Facades\Route;
 
@@ -77,7 +78,9 @@ Route::get('/admin/multipleimage/delete/{id}', [PackageController::class,'delima
 //Order Packages
 Route::get('/admin/pending-order', [OrderController::class,'pendingOrder']);
 Route::get('/admin/running-order', [OrderController::class,'runningOrder']);
+Route::get('/admin/end-order', [OrderController::class,'endAllOrder']);
 Route::get('/admin/order/approve/{id}', [OrderController::class,'approveOrder']);
+Route::get('/admin/order/end/{id}', [OrderController::class,'endOrder']);
 Route::get('/admin/order/delete/{id}', [OrderController::class,'deleteOrder']);
 
 //Gallery Packages
@@ -94,11 +97,16 @@ Route::get('/admin/employee/{id}', [EmployeeController::class,'edit']);
 Route::get('/admin/employee/delete/{id}', [EmployeeController::class,'destroy']);
 Route::get('/admin/employee/pay/{id}', [EmployeeController::class,'pay']);
 Route::post('/admin/employee_payment/{id}', [EmployeeController::class,'payment']);
-Route::post('/admin/employee_payment/{id}', [EmployeeController::class,'payment']);
 
 //Customer manage
 Route::get('admin/customer', [CustomerController::class,'index']);
 Route::get('admin/customer/delete/{id}', [CustomerController::class,'delete']);
+
+
+//add review
+Route::get('admin/reviews', [ReviewController::class,'index']);
+Route::post('send/comment', [ReviewController::class,'sendReview']);
+Route::post('send/replay', [ReviewController::class,'sendreplay']);
 
 
 });

@@ -8,7 +8,7 @@
 
     <div class="row justify-content-center">
 
-<a class="btn btn-success" href="{{ url('/admin/end-order') }}">End order</a>
+<a class="btn btn-success" href="{{ url('/admin/pending-order') }}">Pending order</a>
             <table id="datatablesSimple">
                 <thead>
                     <tr>

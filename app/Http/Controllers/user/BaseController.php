@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Gallery;
 use App\Models\Package;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 class BaseController extends Controller
@@ -35,8 +36,10 @@ class BaseController extends Controller
     }
     public function packagedetails($slug)
     {
+
         $category = Category::all();
         $package = Package::where('slug',$slug)->first();
-        return view('user.package-details',compact('package','category'));
+        $reviews = Review::where('package_id',$package->id)->where('is_active',0)->paginate(10);
+        return view('user.package-details',compact('package','category','reviews'));
     }
 }
