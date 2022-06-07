@@ -8,11 +8,11 @@
                 <div class="row">
                     <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
                         <div class="banner-content content-padding">
-                            <h5 class="subtitle">A creative agency</h5>
-                            <h1 class="banner-title">We craft seo and digital markting services</h1>
-                            <p>We provide marketing services to startups and small businesses to looking for a partner for their digital media, design-area.We are a a startup company to be commited to work and time management.</p>
+                            <h5 class="subtitle">A Art  Creation</h5>
+                            <h1 class="banner-title">A happy marriage is a long conversation which always seems too short.</h1>
+                            <p>We provide best wedding plan for the beautiful bride and grome and Make their wedding day unforagateble</p>
 
-                            <a href="#" class="btn btn-white btn-circled">lets start</a>
+                            <a href="#" class="btn btn-white btn-circled">Press Me</a>
                         </div>
                     </div>
                 </div>
@@ -27,8 +27,8 @@
         <div class="row">
             <div class="col-lg-12 col-sm-12 m-auto">
                 <div class="section-heading">
-                    <h4 class="section-title">Affordable pricing plan for you</h4>
-                    <p>We have different type of pricing table to choose with your need. Check which one is most suitble for you and your business purpose. </p>
+                    <h4 class="section-title">Affordable pricing plan for your Different Ocassion </h4>
+                    <p>We have different type of pricing table to choose with your need. Check which one is most suitble for you and your wedding and other Ocassion purpose. </p>
                 </div>
             </div>
         </div>
@@ -67,8 +67,8 @@
         <div class="row">
             <div class="col-lg-12 col-sm-12 m-auto">
                 <div class="section-heading text-white">
-                    <h4 class="section-title">Full stack digital marketing solution</h4>
-                    <p>We’re full service which means we’ve got you covered on design & content right through to digital. You’ll form a lasting relationship with us.</p>
+                    <h4 class="section-title">We Will be always ready for your different occasion </h4>
+                    <p>It is a treasure that is outshined by what it means…eternal romance." -Theresa Ann Moore, "Engagement Ring".</p>
                 </div>
             </div>
         </div>
