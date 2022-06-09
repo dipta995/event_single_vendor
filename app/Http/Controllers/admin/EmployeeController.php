@@ -7,6 +7,7 @@ use App\Models\Employee;
 use App\Models\EmployeePayment;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
 
 class EmployeeController extends Controller
 {
@@ -59,6 +60,10 @@ public function store(Request $request)
         ]);
 
         if ($addpack) {
+            User::where('id',$request->input('customer_id'))->update([
+                'flag'=>$request->input('flag'),
+                'role'=>'admin',
+            ]);
 
             return redirect('/admin/employee')->with('success','inserted');
                     }
@@ -110,6 +115,9 @@ public function update(Request $request, $id)
         ]);
 
             if ($updateproduct) {
+                User::where('id',$request->input('customer_id'))->update([
+                    'flag'=>$request->input('flag'),
+                ]);
 
             return redirect('/admin/employee')->with('success','inserted');
                 }

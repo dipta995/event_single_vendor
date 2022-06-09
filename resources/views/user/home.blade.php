@@ -12,7 +12,11 @@
                             <h1 class="banner-title">A happy marriage is a long conversation which always seems too short.</h1>
                             <p>We provide best wedding plan for the beautiful bride and grome and Make their wedding day unforagateble</p>
 
+<<<<<<< HEAD
                             <a href="#" class="btn btn-white btn-circled">Press Me</a>
+=======
+                            <a href="{{ url('contact-us') }}" class="btn btn-white btn-circled">ontact Us</a>
+>>>>>>> 27fd7e22439a9841d36f36141721399ad1d644e9
                         </div>
                     </div>
                 </div>

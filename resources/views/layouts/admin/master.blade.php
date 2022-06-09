@@ -107,14 +107,16 @@
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="{{ url('admin/customer') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
+                                Customers
                             </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="{{ url('admin/reviews') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Reviews
                             </a>
+
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

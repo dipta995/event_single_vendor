@@ -21,7 +21,17 @@
                                         <option value="{{ $item->id }}">{{ $item->name }}</option>
                                         @endforeach
                                     </select>
-                                <label for="inputFirstName">name</label>
+                                <label for="inputFirstName">Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3 mb-md-0">
+                                    <select name="flag" class="form-control" id="">
+                                       <option value="1">Admin</option>
+                                       <option value="2">Editor</option>
+                                       <option value="3">Employee</option>
+                                    </select>
+                                <label for="inputFirstName">Role</label>
                                 </div>
                             </div>
 

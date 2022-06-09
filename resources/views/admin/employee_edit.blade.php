@@ -28,6 +28,20 @@
 
                             <div class="col-md-12">
                                 <div class="form-floating mb-3 mb-md-0">
+                                    <select name="flag" class="form-control" id="">
+
+
+                                        <option  {{ ($employee->flag==1) ? 'selected' : '' }} value="1">Admin</option>
+                                        <option {{ ($employee->flag==2) ? "selected":'' }}  value="2">Editor</option>
+                                        <option {{ ($employee->flag==3) ? "selected":'' }} value="3">Employee</option>
+
+                                    </select>
+                                <label for="inputFirstName">Role</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-floating mb-3 mb-md-0">
                                     <input class="form-control" name="salary" id="inputFirstName" type="number" min="0" value="{{ $employee->salary }}" />
                                     <label for="inputFirstName">Salary</label>
                                 </div>
