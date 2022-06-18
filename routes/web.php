@@ -35,7 +35,7 @@ Route::get('/packages', [BaseController::class,'allpackage']);
 Route::get('/category/{slug}', [BaseController::class,'packByCategory']);
 Route::get('package-details/{slug}', [BaseController::class,'packagedetails']);
 
-Route::group(['middleware'=>['auth:sanctum','verified','auth',]],function(){
+Route::group(['middleware'=>['auth:sanctum','auth',]],function(){
 //Customer Authontication Area
 Route::get('offer/{slug}', [OrderController::class,'offerview']);
 Route::get('order-list', [OrderController::class,'customerOrderhistory']);
@@ -48,7 +48,7 @@ Route::get('/contact-us', function () {
 
 });
 //Admin Authontication Area
-Route::group(['middleware'=>['auth:sanctum','verified','authadmin',]],function(){
+Route::group(['middleware'=>['auth:sanctum','authadmin',]],function(){
 Route::get('/author', function () {
     return view('admin.home');
 });
