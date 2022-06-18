@@ -30,8 +30,8 @@
                                         <tr>
                                             <td>{{ $key+1 }}</td>
                                             <td>{{ $item->pr_title }}</td>
-                                            <td>{{ $item->package_price }}</td>
-                                            <td>{{ $item->package_price-(($item->package_price*$item->discount)/100) }}</td>
+                                            <td>{{ $item->package_price }} Taka</td>
+                                            <td>{{ $item->package_price-(($item->package_price*$item->discount)/100) }} Taka</td>
                                             <td>{{ $item->offer_price }}</td>
                                             <td>
                                                 @php
