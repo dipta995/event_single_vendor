@@ -22,16 +22,16 @@
                                                     @include('layouts.admin.message')
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="">request_date</label>
-                                                    <input name="request_date" min ='<?php echo date('Y-m-d');?>' type="date" placeholder="search" class="form-control">
+                                                    <label for="">Request Date</label>
+                                                    <input required name="request_date" min ='<?php echo date('Y-m-d');?>' type="date" placeholder="search" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Day</label>
-                                                    <input type="number" name="day" min="{{ $package->day }}" max="{{ $package->day }}" value="{{ $package->day }}" class="form-control">
+                                                    <input required type="number" name="day" min="{{ $package->day }}" max="{{ $package->day }}" value="{{ $package->day }}" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">offer_price</label>
-                                                    <input type="number" name="offer_price"  value="{{ $price_main = $package->price-(($package->price*$package->discount)/100) }}" max="{{ $price_main }}" min="{{ round($package->price-($price_main*20)/100) }}"  class="form-control">
+                                                    <input type="number" name="offer_price" required value="{{ $price_main = $package->price-(($package->price*$package->discount)/100) }}" max="{{ $price_main }}" min="{{ round($package->price-($price_main*20)/100) }}"  class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">message</label>
