@@ -19,7 +19,7 @@ class OrderController extends Controller
     public function offerview($slug)
     {
         $category = Category::all();
-        $package = Package::where('is_active','0')->first();
+        $package = Package::where('slug',$slug)->first();
         return view('user.offer-request',compact('package','category'));
     }
     public function store(Request $request)
