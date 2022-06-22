@@ -16,6 +16,7 @@
                     </div>
                     <div class="service-inner">
                         <h4>{{ $pack->pr_title }}</h4>
+                        <p style="font-size:18px;" class="price"><small>৳</small> <del> {{ $pack->price }} </del></p>
                         <p style="font-size:18px;" class="price"><small>৳</small> {{ $pack->price-(($pack->price*$pack->discount)/100)}}</p>
                         <ul>
                             @php

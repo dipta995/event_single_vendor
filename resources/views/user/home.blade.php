@@ -39,7 +39,8 @@
                     <div class="price-header">
                         <img style="max-width: 320px; max-height: 180px;" src="{{ url('images/'.$pack->image ) }}" alt="">
 
-                        <h5>{{ $pack->pr_title }}</h5>
+                        <h4>{{ $pack->pr_title }}</h4>
+                        <p style="font-size:18px;" class="price"><small>৳</small><del> {{ $pack->price }} </del></p>
                         <p style="font-size:18px;" class="price"><small>৳</small> {{ $pack->price-(($pack->price*$pack->discount)/100)}}</p>
                     </div>
                     <div class="line"></div>
