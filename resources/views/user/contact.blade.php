@@ -15,9 +15,9 @@
                     <div class="card">
                         <div class="card-body">
                             <img src="{{ asset('user/images/clients/client04.png') }}" alt="">
-                            <p>Name: Mr a</p>
-                            <p>Phone: 01632315608</p>
-                            <p>Email: <a href="">dipta995@gmail.com</a></p>
+                            <p>Name:Mirza Md. Nawshad</p>
+                            <p>Phone: 01625716366</p>
+                            <p>Email: <a href="">mirzanawshad@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -25,9 +25,9 @@
                     <div class="card">
                         <div class="card-body">
                             <img src="{{ asset('user/images/clients/client04.png') }}" alt="">
-                            <p>Name: Mr a</p>
-                            <p>Phone: 01632315608</p>
-                            <p>Email: <a href="">dipta995@gmail.com</a></p>
+                            <p>Name:Mirza  Md. Nawshad</p>
+                            <p>Phone: 01303110285</p>
+                            <p>Email: <a href="">mirzanawshad1@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
