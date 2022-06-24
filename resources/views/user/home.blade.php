@@ -12,7 +12,7 @@
                             <h1 class="banner-title">A happy marriage is a long conversation which always seems too short.</h1>
                             <p>We provide best wedding plan for the beautiful bride and grome and Make their wedding day unforagateble</p>
 
-                            <a href="{{ url('contact-us') }}" class="btn btn-white btn-circled">ontact Us</a>
+                            <a href="{{ url('contact-us') }}" class="btn btn-white btn-circled">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
 
                                             <p><i class="icofont icofont-quote-left"></i>They is a great platform to anyone like who want to start buisiness but not get right decision. It’s really great placefor new to start the buisness in righ way! <i class="icofont icofont-quote-right"></i></p>
                                             <div class="author-text">
-                                                <h5>Marine Joshi</h5>
+                                                <h5>Mirza Nawshad</h5>
                                                 <p>Senior designer</p>
                                             </div>
                                         </div>
@@ -153,7 +153,7 @@
 
                                             <p><i class="icofont icofont-quote-left"></i>They is a great platform to anyone like who want to start buisiness but not get right decision. It’s really great placefor new to start the buisness in righ way! <i class="icofont icofont-quote-right"></i></p>
                                             <div class="author-text">
-                                                <h5>Marine Joshi</h5>
+                                                <h5>Munna</h5>
                                                 <p>Senior designer</p>
                                             </div>
                                         </div>
@@ -174,7 +174,7 @@
 
                                             <p><i class="icofont icofont-quote-left"></i>They is a great platform to anyone like who want to start buisiness but not get right decision. It’s really great placefor new to start the buisness in righ way!<i class="icofont icofont-quote-right"></i></p>
                                             <div class="author-text">
-                                                <h5>Marine Joshi</h5>
+                                                <h5>Military</h5>
                                                 <p>Senior designer</p>
                                             </div>
                                         </div>
