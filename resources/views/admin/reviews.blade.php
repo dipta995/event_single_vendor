@@ -30,6 +30,7 @@
 
                 </tfoot>
                 <tbody>
+
                     <tr>
                         @foreach ($reviews as $key=>$item)
                         <tr>
@@ -38,10 +39,12 @@
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->comment_at }}</td>
                             <td>{{ $item->comment }}</td>
+
+
                             <td>
                                 <form class="from-group" action="{{ url('send/replay') }}" method="POST">
                                     @csrf
-                                    <input type="hidden" name="id" value="{{ $item->id }}">
+                                    <input type="hidden" name="id" value="{{ $item->review_id }}">
                                     <textarea class="from-controll" type="text" name="replay"></textarea>
                                     <input class="btn btn-info" type="submit">
                                 </form>

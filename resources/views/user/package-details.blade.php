@@ -58,7 +58,7 @@
                                     <img src="{{ asset('user/images/blog/2.jpg') }}" alt="" class="img-fluid d-flex mr-4 rounded">
                                     <div class="media-body">
                                         <h5>{{ $value->name }}</h5>
-                                        <span class="text-muted">{{ $value->comment_at }}</span>
+                                    <span class="text-muted">{{ $value->comment_at }}</span>
                                         <p class="mt-2">{{ $value->comment }}</p>
 
                                         {{-- <a href="#" class="reply">Reply <i class="fa fa-reply"></i></a> --}}
@@ -129,7 +129,7 @@
                             <div class="sidebar-widget about-bar">
                                 <h5 class="mb-3">Pricing</h5>
                                 <a href="{{ url('offer/'.$package->slug) }}" class="btn btn-info">Send An Offer</a>
-                                <p>Price :  {{ $package->price-(($package->price*$package->discount)/100) }}</p>
+                                <p>Price : <del>{{ $package->price }} <small>৳</small></del>  {{ $package->price-(($package->price*$package->discount)/100) }} <small>৳</small></p>
                                 <ul>
                                     @php
                                         echo $package->short_description;

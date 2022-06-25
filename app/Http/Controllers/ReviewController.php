@@ -10,7 +10,7 @@ class ReviewController extends Controller
 {
     public function index()
     {
-        $reviews = Review::leftJoin('users','users.id','reviews.user_id')->leftJoin('packages','packages.id','reviews.package_id')->where('replay',null)->get();
+        $reviews = Review::leftJoin('users','users.id','reviews.user_id')->leftJoin('packages','packages.id','reviews.package_id')->select('reviews.*','users.*','packages.*','reviews.id as review_id')->where('replay',null)->get();
         return view('admin.reviews',compact('reviews'));
 
     }
