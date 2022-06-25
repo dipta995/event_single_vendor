@@ -158,9 +158,9 @@
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="footer-widget footer-text">
                     <h4>Our location</h4>
-                    <p class="mail"><span>Mail:</span> promdise@gmail.com</p>
-                    <p><span>Phone :</span>+202-277-3894</p>
-                    <p><span>Location:</span> 455 West Orchard Street Kings Mountain, NC 28086,NOC building</p>
+                    <p class="mail"><span>Mail:</span> duoproject@gmail.com</p>
+                    <p><span>Phone :</span>+8801625716366</p>
+                    <p><span>Location:</span>  Bhairab Bazar,Kishoreganj,Dhaka,Bangladesh </p>
                 </div>
             </div>
         </div>
