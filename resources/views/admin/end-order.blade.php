@@ -18,7 +18,6 @@
                         <th>Price/discount</th>
                         <th>offer</th>
                         <th>details</th>
-                        <th>Action</th>
 
                     </tr>
                 </thead>
@@ -29,8 +28,6 @@
                     <th>Price/discount</th>
                     <th>offer</th>
                     <th>details</th>
-                    <th>Action</th>
-
                 </tfoot>
                 <tbody>
                     <tr>
@@ -42,7 +39,6 @@
                             <td>{{ $item->package_price }}<br>{{ $item->package_price-(($item->package_price*$item->discount)/100) }}</td>
                             <td>{{ $item->offer_price }}</td>
                             <td>{{ $item->message }}</td>
-                            <td><a href="{{ url('/admin/order/end/'.$item->id) }}" class="btn btn-info m-2"><i class="fas fa-clock"></i></a></td>
                         </tr>
                     @endforeach
                     </tr>
