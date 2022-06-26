@@ -125,7 +125,7 @@
             <div class="col-lg-5 col-sm-8 col-md-8">
                 <div class="footer-widget footer-link">
                     <h4>We concern about you<br> to grow business rapidly.</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsam hic non sunt recusandae atque unde saepe nihil earum voluptatibus aliquid optio suscipit nobis quia excepturi vel quod, iure quae.</p>
+                    <p>Our main purpose is to capture and  make your special moments unforgatable with outstanding photography and video graphy as well.That's why we are hear for you</p>
                 </div>
             </div>
             <div class="col-lg-2 col-sm-4 col-md-4">
@@ -136,11 +136,12 @@
                         <li><a href="#">Service</a></li>
                         <li><a href="#">Pricing</a></li>
                         <li><a href="#">Team</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Blog</a></li>
+                       
                     </ul>
                 </div>
             </div>
+
+            <!-- This Quick link jkhn lagbe tkhn use korbo 
 
             <div class="col-lg-2 col-sm-6 col-md-6">
                 <div class="footer-widget footer-link">
@@ -155,10 +156,11 @@
                     </ul>
                 </div>
             </div>
+             This is a comment -->
             <div class="col-lg-3 col-sm-6 col-md-6">
                 <div class="footer-widget footer-text">
                     <h4>Our location</h4>
-                    <p class="mail"><span>Mail:</span> duoproject@gmail.com</p>
+                    <p class="mail"><span>Mail:</span> mirzanawshad@gmail.com</p>
                     <p><span>Phone :</span>+8801625716366</p>
                     <p><span>Location:</span>  Bhairab Bazar,Kishoreganj,Dhaka,Bangladesh </p>
                 </div>
@@ -167,7 +169,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="footer-copy">
-                    © 2018 Promodise inc. All Rights Reserved.
+                    © 2022 Promodise inc. All Rights Reserved.By Tazir Munna & Mirza Md. Nawshad
                 </div>
             </div>
         </div>

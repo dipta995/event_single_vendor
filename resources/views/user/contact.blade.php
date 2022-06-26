@@ -25,9 +25,9 @@
                     <div class="card">
                         <div class="card-body">
                             <img src="{{ asset('user/images/clients/client04.png') }}" alt="">
-                            <p>Name:Mirza  Md. Nawshad</p>
+                            <p>Name:Tanzir Munna </p>
                             <p>Phone: 01303110285</p>
-                            <p>Email: <a href="">mirzanawshad1@gmail.com</a></p>
+                            <p>Email: <a href="">munnatanzir@gmail.com</a></p>
                         </div>
                     </div>
                 </div>

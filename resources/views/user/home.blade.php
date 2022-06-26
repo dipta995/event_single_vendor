@@ -62,7 +62,7 @@
 
 
 
-<!--  SERVICE PARTNER START  -->
+<!--  SERVICE PARTNER START  
 <section id="service-head" class=" bg-feature">
     <div class="container">
         <div class="row">
@@ -75,9 +75,9 @@
         </div>
     </div>
 </section>
-<!--  SERVICE PARTNER END  -->
+  SERVICE PARTNER END  -->
 
-<!--  SERVICE AREA START  -->
+<!--  SERVICE AREA START -->
     <section id="service">
         <div class="container">
             <div class="row">
@@ -100,7 +100,7 @@
     </section>
     <!--  SERVICE AREA END  -->
 
-<!--  TESTIMONIAL AREA START  -->
+<!--  TESTIMONIAL AREA START 
     <section id="testimonial" class="section-padding ">
         <div class="container">
             <div class="row justify-content-center">
@@ -160,7 +160,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--  ITEM END  -->
+                             ITEM start END 
 
                             <div class="carousel-item ">
                                 <div class="row">
@@ -181,15 +181,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--  ITEM END  -->
+                              ITEM END  here
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--  TESTIMONIAL AREA END  -->
-<!--  PARTNER START  -->
+     TESTIMONIAL AREA END  -->
+
+<!--  PARTNER START
 <section  class="section-padding ">
     <div class="container">
         <div class="row">
@@ -208,8 +209,8 @@
         </div>
     </div>
 </section>
-<!--  PARTNER END  -->
-<!--  BLOG AREA START  -->
+  PARTNER END  -->
+<!--  BLOG AREA START
     <section id="blog" class="section-padding bg-main">
         <div class="container">
             <div class="row">
@@ -262,8 +263,10 @@
             </div>
         </div>
     </section>
-    <!--  BLOG AREA END  -->
-<!--  COUNTER AREA START  -->
+      BLOG AREA END  -->
+
+<!--  COUNTER AREA START
+
 <section id="counter" class="section-padding">
     <div class="overlay dark-overlay"></div>
     <div class="container">
@@ -299,4 +302,5 @@
         </div>
     </div>
 </section>
+ COUNTER AREA END Here  -->
 @endsection
