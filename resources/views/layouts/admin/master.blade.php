@@ -20,7 +20,7 @@
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                
+
             </div>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -80,7 +80,7 @@
 
                                 </nav>
                             </div>
-                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            {{-- <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts1">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Employee
@@ -93,13 +93,13 @@
 
 
                                 </nav>
-                            </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            </div> --}}
+                            <div class="sb-sidenav-menu-heading"></div>
                             <a class="nav-link" href="{{ url('admin/customer') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Customers
                             </a>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <div class="sb-sidenav-menu-heading"></div>
                             <a class="nav-link" href="{{ url('admin/reviews') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Reviews
