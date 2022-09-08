@@ -124,8 +124,8 @@
         <div class="row">
             <div class="col-lg-5 col-sm-8 col-md-8">
                 <div class="footer-widget footer-link">
-                    <h4>We concern about you<br> to grow business rapidly.</h4>
-                    <p>Our main purpose is to capture and  make your special moments unforgatable with outstanding photography and video graphy as well.That's why we are hear for you</p>
+                    <h4>Our aim is to<br> make your event wonderful.</h4>
+                    <p>Our main purpose is to make your event successful and  make your special moments unforgatable with outstanding photography and video graphy as well.That's why we are hear for you</p>
                 </div>
             </div>
             <div class="col-lg-2 col-sm-4 col-md-4">
@@ -134,7 +134,7 @@
                     <ul>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Service</a></li>
-                        <li><a href="#">Pricing</a></li>
+                        <!--<li><a href="#">Pricing</a></li> -->
                         <li><a href="#">Team</a></li>
                        
                     </ul>
