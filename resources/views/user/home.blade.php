@@ -8,9 +8,9 @@
                 <div class="row">
                     <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
                         <div class="banner-content content-padding">
-                            <h5 class="subtitle">A Art  Creation</h5>
-                            <h1 class="banner-title">A happy marriage is a long conversation which always seems too short.</h1>
-                            <p>We provide best wedding plan for the beautiful bride and grome and Make their wedding day unforagateble</p>
+                          <!--  <h5 class="subtitle">A Art  Creation</h5> -->
+                         <!--  <h1 class="banner-title">A happy marriage is a long conversation which always seems too short.</h1> -->
+                          <p>We provide best wedding plan for the beautiful bride and grome and Make their wedding day unforagateble</p>
 
                             <a href="{{ url('contact-us') }}" class="btn btn-white btn-circled">Contact Us</a>
                         </div>
