@@ -75,7 +75,7 @@ Route::get('/admin/multipleimage', [PackageController::class,'imageindex']);
 Route::post('add_multiple_image', [PackageController::class,'multipleimage']);
 Route::get('/admin/multipleimage/delete/{id}', [PackageController::class,'delimage']);
 
-//Order Packages
+//Orde Packages
 Route::get('/admin/pending-order', [OrderController::class,'pendingOrder']);
 Route::get('/admin/running-order', [OrderController::class,'runningOrder']);
 Route::get('/admin/end-order', [OrderController::class,'endAllOrder']);

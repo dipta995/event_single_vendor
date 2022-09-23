@@ -75,7 +75,7 @@
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="{{ url('/admin/pending-order') }}">Order Request</a>
+                                    <a class="nav-link" href="{{ url('/admin/pending-order') }}">Orde Request</a>
 
 
                                 </nav>
