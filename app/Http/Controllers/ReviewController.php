@@ -17,6 +17,7 @@ class ReviewController extends Controller
 
     public function sendReview(Request $request)
     {
+        dd($request->all());
         if ($request->input('submit')) {
          $send =Review::create([
             'user_id' => Auth::user()->id,
