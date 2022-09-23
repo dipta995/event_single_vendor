@@ -27,7 +27,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Day</label>
-                                                    <input required type="number" name="day" min="{{ $package->day }}" max="{{ $package->day }}" value="{{ $package->day }}" class="form-control">
+                                                    <input required type="number" readonly name="day" min="{{ $package->day }}" max="{{ $package->day }}" value="{{ $package->day }}" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">offer_price</label>
@@ -64,7 +64,7 @@
             <div class="col-lg-4">
                                     <div class="row">
                         <div class="col-lg-12">
-                           
+
                         </div>
 
                         <div class="col-lg-12">
