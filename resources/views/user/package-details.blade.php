@@ -128,7 +128,7 @@
                         <div class="col-lg-12">
                             <div class="sidebar-widget about-bar">
                                 <h5 class="mb-3">Pricing</h5>
-                                <a href="{{ url('offer/'.$package->slug) }}" class="btn btn-info">Send An Offer</a>
+                                <a href="{{ url('offer/'.$package->slug) }}" class="btn btn-info">Orde</a>
                                 <p>Price : <del>{{ $package->price }} <small>৳</small></del>  {{ $package->price-(($package->price*$package->discount)/100) }} <small>৳</small></p>
                                 <ul>
                                     @php

@@ -27,7 +27,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Day</label>
-                                                    <input required type="number" name="day" min="{{ $package->day }}" max="{{ $package->day }}" value="{{ $package->day }}" class="form-control">
+                                                    <input required type="number" readonly name="day" min="{{ $package->day }}" max="{{ $package->day }}" value="{{ $package->day }}" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">offer_price</label>
@@ -64,13 +64,13 @@
             <div class="col-lg-4">
                                     <div class="row">
                         <div class="col-lg-12">
-                           
+
                         </div>
 
                         <div class="col-lg-12">
                             <div class="sidebar-widget about-bar">
                                 <h5 class="mb-3">Pricing</h5>
-                                <a href="{{ url('offer/'.$package->slug) }}" class="btn btn-info">Send An Offer</a>
+                                <a href="{{ url('offer/'.$package->slug) }}" class="btn btn-info">Order</a>
                                 <p>Price : <del> {{ $package->price }} <small>৳</small></del>  {{ $package->price-(($package->price*$package->discount)/100) }} <small>৳</small></p>
                                 <ul>
                                     @php

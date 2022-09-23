@@ -17,10 +17,10 @@ class PackageController extends Controller
      */
     public function index()
     {
-        $packages = Package::leftJoin('categories','categories.id','packages.cat_id')->where('is_active','0')->get();
+        $packages = Package::leftJoin('categories','categories.id','packages.cat_id')->select('packages.*','categories.*','packages.id as id')->where('is_active','0')->get();
         return view('admin.package',compact('packages'));
     }
- 
+
     /**
      * Show the form for creating a new resource.
      *
