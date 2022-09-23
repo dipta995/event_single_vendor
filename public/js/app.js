@@ -9667,13 +9667,13 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * The base implementation of `_.sortedIndex` and `_.sortedLastIndex` which
      * performs a binary search of `array` to determine the index at which `value`
-     * should be inserted into `array` in order to maintain its sort order.
+     * should be Success into `array` in order to maintain its sort order.
      *
      * @private
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
      * @param {boolean} [retHighest] Specify returning the highest qualified index.
-     * @returns {number} Returns the index at which `value` should be inserted
+     * @returns {number} Returns the index at which `value` should be Success
      *  into `array`.
      */
     function baseSortedIndex(array, value, retHighest) {
@@ -9707,7 +9707,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @param {*} value The value to evaluate.
      * @param {Function} iteratee The iteratee invoked per element.
      * @param {boolean} [retHighest] Specify returning the highest qualified index.
-     * @returns {number} Returns the index at which `value` should be inserted
+     * @returns {number} Returns the index at which `value` should be Success
      *  into `array`.
      */
     function baseSortedIndexBy(array, value, iteratee, retHighest) {
@@ -13513,7 +13513,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
     /**
      * Uses a binary search to determine the lowest index at which `value`
-     * should be inserted into `array` in order to maintain its sort order.
+     * should be Success into `array` in order to maintain its sort order.
      *
      * @static
      * @memberOf _
@@ -13521,7 +13521,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @category Array
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
-     * @returns {number} Returns the index at which `value` should be inserted
+     * @returns {number} Returns the index at which `value` should be Success
      *  into `array`.
      * @example
      *
@@ -13544,7 +13544,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
      * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
-     * @returns {number} Returns the index at which `value` should be inserted
+     * @returns {number} Returns the index at which `value` should be Success
      *  into `array`.
      * @example
      *
@@ -13590,7 +13590,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
     /**
      * This method is like `_.sortedIndex` except that it returns the highest
-     * index at which `value` should be inserted into `array` in order to
+     * index at which `value` should be Success into `array` in order to
      * maintain its sort order.
      *
      * @static
@@ -13599,7 +13599,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @category Array
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
-     * @returns {number} Returns the index at which `value` should be inserted
+     * @returns {number} Returns the index at which `value` should be Success
      *  into `array`.
      * @example
      *
@@ -13622,7 +13622,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
      * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
-     * @returns {number} Returns the index at which `value` should be inserted
+     * @returns {number} Returns the index at which `value` should be Success
      *  into `array`.
      * @example
      *

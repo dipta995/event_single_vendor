@@ -16,7 +16,8 @@
                         <th>Customer</th>
                         <th>Review at</th>
                         <th>Review</th>
-                        <th>Action</th>
+                        <th>Comment</th>
+                        <th>Action</tr>/th>
 
                     </tr>
                 </thead>
@@ -26,6 +27,7 @@
                         <th>Customer</th>
                         <th>Review at</th>
                         <th>Review</th>
+                        <th>Comment</th>
                         <th>Action</th>
 
                 </tfoot>
@@ -48,6 +50,11 @@
                                     <textarea class="from-controll" type="text" name="replay"></textarea>
                                     <input class="btn btn-info" type="submit">
                                 </form>
+</td>
+                                <td>
+                                <a class="btn btn-danger" href="{{ url('admin/reviews/delete/'.$item->review_id) }}">
+                                    Delete
+                                </a>
                             </td>
                         </tr>
                     @endforeach

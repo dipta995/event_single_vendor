@@ -112,13 +112,17 @@
             </div>
         </div>
     </nav>
-    <!--MAIN HEADER AREA END -->
+    
 
-<!--MAIN BANNER AREA START -->
+
+
 @yield('content')
-<!--  COUNTER AREA END  -->
 
-<!--  FOOTER AREA START  -->
+
+
+
+
+
 <section id="footer" class="section-padding">
     <div class="container">
         <div class="row">

@@ -17,7 +17,6 @@ class ReviewController extends Controller
 
     public function sendReview(Request $request)
     {
-        dd($request->all());
         if ($request->input('submit')) {
          $send =Review::create([
             'user_id' => Auth::user()->id,
@@ -28,7 +27,7 @@ class ReviewController extends Controller
         ]);
 
         if ($send) {
-            return back()->with('success','inserted');
+            return back()->with('success','Success');
         }else {
             return back()->with('error','Something wrong');
         }
@@ -42,10 +41,20 @@ class ReviewController extends Controller
         ]);
 
         if ($send) {
-            return back()->with('success','inserted');
+            return back()->with('success','Success');
         }else {
             return back()->with('error','Something wrong');
         }
 
+    }
+
+    public function destroy($id)
+    {
+        $send = Review::destroy($id);
+        if ($send) {
+            return back()->with('success','Success');
+        }else {
+            return back()->with('error','Something wrong');
+        }
     }
 }

@@ -68,7 +68,7 @@ class PackageController extends Controller
 
           if ($addpack) {
              $file->move(public_path('images/'),$file_name);
-             return redirect('/admin/package')->with('success','inserted');
+             return redirect('/admin/package')->with('success','Success');
                        }
 
           else{
@@ -152,7 +152,7 @@ class PackageController extends Controller
 
              if ($updateproduct) {
 
-                return redirect('/admin/package')->with('success','inserted');
+                return redirect('/admin/package')->with('success','Success');
                   }
              else{
                return back()->with('fail','Something Went wrong Try Again!');
