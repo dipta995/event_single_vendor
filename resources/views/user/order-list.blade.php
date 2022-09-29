@@ -6,9 +6,8 @@
 </div>
 <section class="section blog-wrap">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-lg-8">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-12">
                     <div class="row">
                         <div class="col-md-12">
                             <table style="color: #000;" class="table table-info">
