@@ -42,10 +42,11 @@ Route::get('order-list', [OrderController::class,'customerOrderhistory']);
 // Route::get('order/{slug}', [OrderController::class,'orderview']);
 Route::post('send-order-offer', [OrderController::class,'store']);
 Route::get('/gallery', [GalleryController::class,'index']);
+
+
+});
 Route::get('/contact-us', function () {
     return view('user.contact');
-});
-
 });
 //Admin Authontication Area
 Route::group(['middleware'=>['auth:sanctum','authadmin',]],function(){
