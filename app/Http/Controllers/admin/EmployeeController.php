@@ -65,7 +65,7 @@ public function store(Request $request)
                 'role'=>'admin',
             ]);
 
-            return redirect('/admin/employee')->with('success','inserted');
+            return redirect('/admin/employee')->with('success','Success');
                     }
 
         else{
@@ -119,7 +119,7 @@ public function update(Request $request, $id)
                     'flag'=>$request->input('flag'),
                 ]);
 
-            return redirect('/admin/employee')->with('success','inserted');
+            return redirect('/admin/employee')->with('success','Success');
                 }
             else{
             return back()->with('fail','Something Went wrong Try Again!');
@@ -138,7 +138,7 @@ public function destroy($id)
             'is_active'=>1
             ]);
                 if ($updateproduct) {
-                return redirect('/admin/employee')->with('success','inserted');
+                return redirect('/admin/employee')->with('success','Success');
                 }
                 else{
                 return back()->with('fail','Something Went wrong Try Again!');
@@ -160,7 +160,7 @@ public function destroy($id)
 
             if ($addpack) {
 
-                return redirect('/admin/employee')->with('success','inserted');
+                return redirect('/admin/employee')->with('success','Success');
                         }
 
             else{

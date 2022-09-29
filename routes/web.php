@@ -90,24 +90,25 @@ Route::post('/admin/add_new_gallery', [GalleryController::class,'store']);
 Route::get('/admin/gallery/delete/{id}', [GalleryController::class,'destroy']);
 
 //Employee Packages
-Route::get('/admin/employee', [EmployeeController::class,'index']);
-Route::get('/admin/employee/create', [EmployeeController::class,'create']);
-Route::post('/admin/employee_create', [EmployeeController::class,'store']);
-Route::post('/admin/employee_update/{id}', [EmployeeController::class,'update']);
-Route::get('/admin/employee/{id}', [EmployeeController::class,'edit']);
-Route::get('/admin/employee/delete/{id}', [EmployeeController::class,'destroy']);
-Route::get('/admin/employee/pay/{id}', [EmployeeController::class,'pay']);
-Route::post('/admin/employee_payment/{id}', [EmployeeController::class,'payment']);
+// Route::get('/admin/employee', [EmployeeController::class,'index']);
+// Route::get('/admin/employee/create', [EmployeeController::class,'create']);
+// Route::post('/admin/employee_create', [EmployeeController::class,'store']);
+// Route::post('/admin/employee_update/{id}', [EmployeeController::class,'update']);
+// Route::get('/admin/employee/{id}', [EmployeeController::class,'edit']);
+// Route::get('/admin/employee/delete/{id}', [EmployeeController::class,'destroy']);
+// Route::get('/admin/employee/pay/{id}', [EmployeeController::class,'pay']);
+// Route::post('/admin/employee_payment/{id}', [EmployeeController::class,'payment']);
 
 //Customer manage
 Route::get('admin/customer', [CustomerController::class,'index']);
-Route::get('admin/customer/delete/{id}', [CustomerController::class,'delete']);
+Route::get('admin/customer/delete/{id}', [CustomerController::class,'']);
 
 
 //add review
 Route::get('admin/reviews', [ReviewController::class,'index']);
 Route::post('send/comment', [ReviewController::class,'sendReview']);
 Route::post('send/replay', [ReviewController::class,'sendreplay']);
+Route::get('admin/reviews/delete/{id}', [ReviewController::class,'destroy']);
 
 
 });

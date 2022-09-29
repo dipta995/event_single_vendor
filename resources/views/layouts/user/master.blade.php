@@ -112,19 +112,42 @@
             </div>
         </div>
     </nav>
-    <!--MAIN HEADER AREA END -->
 
-<!--MAIN BANNER AREA START -->
+
+
+
 @yield('content')
-<!--  COUNTER AREA END  -->
 
-<!--  FOOTER AREA START  -->
+
+
+
+
+
 <section id="footer" class="section-padding">
     <div class="container">
         <div class="row">
+            <div class="col-md-8">
+                <div class="footer-widget footer-link">
+                    <h4>Our aim is to<br> make your event wonderful.</h4>
+                    <p>Our main purpose is to make your event successful and  make your special moments unforgatable with outstanding photography and video graphy as well.That's why we are hear for you</p>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="footer-widget footer-text">
+                    <h4>Our location</h4>
+                    <p class="mail"><span>Mail:</span> mirzanawshad@gmail.com</p>
+                    <p><span>Phone :</span>+8801625716366</p>
+                    <p><span>Location:</span>  Bhairab Bazar,Kishoreganj,Dhaka,Bangladesh </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="footer-copy">
-                    © 2018 Promodise inc. All Rights Reserved.
+                    © 2022 Promodise inc. All Rights Reserved.By Tazir Munna & Mirza Md. Nawshad
                 </div>
             </div>
         </div>

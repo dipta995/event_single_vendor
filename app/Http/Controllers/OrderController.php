@@ -49,7 +49,7 @@ class OrderController extends Controller
 
           if ($addpack) {
 
-             return redirect('order-list')->with('success','inserted');
+             return redirect('order-list')->with('success','Success');
                        }
 
           else{
@@ -75,7 +75,7 @@ class OrderController extends Controller
             'is_active' => 1,
             ]);
         if ($send) {
-            return redirect('/admin/pending-order')->with('success','inserted');
+            return redirect('/admin/pending-order')->with('success','Success');
         }else {
             return back()->with('error','Something wrong');
         }
@@ -93,7 +93,7 @@ class OrderController extends Controller
             'is_active' => 2,
             ]);
         if ($send) {
-            return redirect('/admin/pending-order')->with('success','inserted');
+            return redirect('/admin/pending-order')->with('success','Success');
         }else {
             return back()->with('error','Something wrong');
         }

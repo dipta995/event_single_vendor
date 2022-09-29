@@ -27,7 +27,7 @@ class ReviewController extends Controller
         ]);
 
         if ($send) {
-            return back()->with('success','inserted');
+            return back()->with('success','Success');
         }else {
             return back()->with('error','Something wrong');
         }
@@ -41,10 +41,20 @@ class ReviewController extends Controller
         ]);
 
         if ($send) {
-            return back()->with('success','inserted');
+            return back()->with('success','Success');
         }else {
             return back()->with('error','Something wrong');
         }
 
+    }
+
+    public function destroy($id)
+    {
+        $send = Review::destroy($id);
+        if ($send) {
+            return back()->with('success','Success');
+        }else {
+            return back()->with('error','Something wrong');
+        }
     }
 }

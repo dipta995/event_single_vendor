@@ -49,7 +49,7 @@ class CategoryController extends Controller
         ]);
 
         if ($send) {
-            return back()->with('success','inserted');
+            return back()->with('success','Success');
         }else {
             return back()->with('error','Something wrong');
         }
@@ -98,7 +98,7 @@ class CategoryController extends Controller
             'cat_title' => $request->cat_title,
             ]);
         if ($send) {
-            return redirect('/admin/category')->with('success','inserted');
+            return redirect('/admin/category')->with('success','Success');
         }else {
             return back()->with('error','Something wrong');
         }
@@ -114,7 +114,7 @@ class CategoryController extends Controller
     {
         $send = Category::destroy($id);
         if ($send) {
-            return back()->with('success','inserted');
+            return back()->with('success','Success');
         }else {
             return back()->with('error','Something wrong');
         }
