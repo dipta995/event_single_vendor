@@ -40,8 +40,8 @@
                                                     elseif ($item->active_check==1) {
                                                        echo "<span class='btn-info'>Running</span>";
                                                     }else {
-                                                        echo "<span class='btn-success'>Finish</span>";
-                                                        echo "<a href='/package-details/".$item->slug."' class='btn btn-info'>Review</a>";
+                                                        echo "<span class='btn-success'>Finish</span> ";
+                                                        echo "<a href='/package-details/".$item->slug."' class='ml-5 p-2 btn-info'>Review</a>";
                                                     }
                                                 @endphp
                                             </td>

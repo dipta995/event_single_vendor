@@ -36,12 +36,13 @@ Route::get('/category/{slug}', [BaseController::class,'packByCategory']);
 Route::get('package-details/{slug}', [BaseController::class,'packagedetails']);
 
 Route::group(['middleware'=>['auth:sanctum','auth',]],function(){
-//Customer Authontication Area
+    //Customer Authontication Area
 Route::get('offer/{slug}', [OrderController::class,'offerview']);
 Route::get('order-list', [OrderController::class,'customerOrderhistory']);
 // Route::get('order/{slug}', [OrderController::class,'orderview']);
 Route::post('send-order-offer', [OrderController::class,'store']);
 Route::get('/gallery', [GalleryController::class,'index']);
+Route::post('send/comment', [ReviewController::class,'sendReview']);
 
 
 });
@@ -50,8 +51,8 @@ Route::get('/contact-us', function () {
 });
 //Admin Authontication Area
 Route::group(['middleware'=>['auth:sanctum','authadmin',]],function(){
-Route::get('/author', function () {
-    return view('admin.home');
+    Route::get('/author', function () {
+        return view('admin.home');
 });
 
 // Route::resource('/author', BaseController::class);
@@ -106,7 +107,6 @@ Route::get('admin/customer/delete/{id}', [CustomerController::class,'']);
 
 //add review
 Route::get('admin/reviews', [ReviewController::class,'index']);
-Route::post('send/comment', [ReviewController::class,'sendReview']);
 Route::post('send/replay', [ReviewController::class,'sendreplay']);
 Route::get('admin/reviews/delete/{id}', [ReviewController::class,'destroy']);
 

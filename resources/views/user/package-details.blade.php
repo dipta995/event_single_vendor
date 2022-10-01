@@ -92,20 +92,10 @@
                                             <textarea name="comment" cols="30" rows="6" class="form-control" placeholder="Message"></textarea>
                                         </div>
                                     </div>
-                                    {{-- <div class="col-lg-6">
-                                        <div class="form-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Name">
-                                        </div>
-                                    </div>
 
-                                    <div class="col-lg-6">
-                                        <div class="form-group mb-4">
-                                            <input type="email" class="form-control" placeholder="Email">
-                                        </div>
-                                    </div> --}}
 
                                     <div class="col-lg-12">
-                                        <input type="submit" name="submit" class="btn btn-hero btn-circled" value="Send a message">
+                                        <input type="submit" name="submit" class="btn btn-hero btn-circled" value="Comment">
                                     </div>
                                 </form>
                             </div>
@@ -116,14 +106,7 @@
             </div>
             <div class="col-lg-4">
                                     <div class="row">
-                        {{-- <div class="col-lg-12">
-                            <div class="sidebar-widget search">
-                                <div class="form-group">
-                                    <input type="text" placeholder="search" class="form-control">
-                                    <i class="fa fa-search"></i>
-                                </div>
-                            </div>
-                        </div> --}}
+
 
                         <div class="col-lg-12">
                             <div class="sidebar-widget about-bar">
